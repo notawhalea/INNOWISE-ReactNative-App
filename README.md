@@ -39,6 +39,8 @@ Requirements:
 * Select icons by yourself. App should contain non-default launch icon
 * Link should be provided to interviewe
 **********
+**How it's look like**
+![GIF](assets/untitled.gif)
 I just relax and gained experience here.:metal:
 
 Still in progress? Convert to draft!:wink:
