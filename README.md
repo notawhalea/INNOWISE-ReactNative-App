@@ -40,7 +40,7 @@ Requirements:
 * Link should be provided to interviewe
 **********
 **How it's look like**
-![GIF](assets/untitled.gif)
+<img src="assets/untitled.gif" width="250" height="500"/>
 I just relax and gained experience here.:metal:
 
 Still in progress? Convert to draft!:wink:
