@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState, useEffect } from 'react';
-import { FlatList, StyleSheet, Text, View, Image} from 'react-native';
+import { FlatList, StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
 
 const pokePath = "https://pokeapi.co/api/v2/";
 const pokeQuery = "pokemon?limit=100&offset=0";
@@ -45,8 +45,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>First Gen Pokemons</Text>
-      <FlatList data={firstHundredPokemonDetails} renderItem={renderPokemon} />
+      <Text style={styles.title}>Pokemon App</Text>
+      <SafeAreaView>
+      <FlatList numColumns={2} data={firstHundredPokemonDetails} renderItem={renderPokemon} />
+      </SafeAreaView>
       <StatusBar style="auto" />
     </View>
   );
@@ -55,23 +57,39 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    marginTop: 60,
+    backgroundColor: 'grey',
   },
   title: {
     fontSize: 38,
     alignSelf: "center",
-    marginBottom: 20,
+    marginBottom: 10,
+    marginTop: 50,
   },
-  pokemonContainer: { backgroundColor: "lightgrey", marginTop: 10 },
+  pokemonContainer: {
+  padding:4,
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'white',
+  marginTop: 8,
+  marginHorizontal: 5,
+  shadowColor: "#000",
+  shadowOffset: {
+    width: 0,
+    height: 2,
+  },
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+
+  elevation: 5,
+},
   pokemonTitle: {
     fontSize: 32,
-    alignSelf: "center",
+    alignSelf: "center",  
     marginTop: 10,
   },
   pokemonSprite: {
-    width: 200,
-    height: 200,
-    alignSelf: "center",
+    width: 100,
+    height: 100,
   },
 });

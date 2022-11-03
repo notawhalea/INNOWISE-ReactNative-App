@@ -41,7 +41,7 @@ Requirements:
 **********
 **How it's look like**
 
-<img src="assets/untitled.gif" width="500" height="800"/>
+<img src="assets/gif.gif" width="500" height="800"/>
 
 I just relax and gained experience here.:metal:
 
