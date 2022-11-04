@@ -9,6 +9,28 @@ const firstHundredPokemonPath = `${pokePath}${pokeQuery}`;
 export default function App() {
   const [firstHundredPokemonDetails, setFirstHundredPokemonDetails] = useState([]);
 
+  /*
+    Here i tried to add pagination but it didnt work...(
+  
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=0=${this.state.page}`).
+    then(response=>response.json())
+    .then(responseJson=>{
+    this.setState({
+    setPokemonData: this.state.page === 1 ? responseJson.results : [...this.state.setPokemonData, ...responseJson.results]
+    })
+    }) 
+    LoadPokemonData = () => {
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=0=${this.state.page}`).
+    then(response => response.json())
+    .then(responseJson => {
+    this.setState({
+    setPokemonData: this.state.page === 1 ? responseJson.results : [...this.state.setPokemonData, ...responseJson.results]
+    })
+    }).catch(error => {
+    console.log('Error with data: ' + error)
+    })
+    }*/
+
   useEffect(() => {
     const fetchFirstHundredPokemons = async () => {
       const firstHundredPokemonIdsResponce = await fetch(firstHundredPokemonPath);
